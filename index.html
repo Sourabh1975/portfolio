@@ -89,6 +89,16 @@ section.active{display:block;}
 
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 @media(max-width:600px){.skills-grid{grid-template-columns:1fr;}}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px;}
+@media(max-width:680px){.services-grid{grid-template-columns:1fr;}}
+.service-card{border:1px solid var(--border2);background:var(--glass);padding:22px;transition:all .25s;}
+.service-card:hover{border-color:var(--border);background:rgba(0,229,255,.04);transform:translateY(-2px);}
+.service-kicker{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--neon);letter-spacing:2px;margin-bottom:10px;}
+.service-title{font-family:'Orbitron',monospace;font-size:13px;color:#fff;letter-spacing:1px;margin-bottom:10px;}
+.service-copy{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:14px;}
+.service-list{display:flex;flex-wrap:wrap;gap:6px;}
+.service-pill{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border:1px solid var(--border2);color:rgba(232,244,255,.56);letter-spacing:1px;}
+.client-note{border:1px solid rgba(255,196,71,.18);background:rgba(255,196,71,.04);padding:20px 22px;color:rgba(232,244,255,.68);font-size:13px;line-height:1.8;}
 .sk-panel{padding:24px;border:1px solid var(--border2);background:var(--glass);position:relative;overflow:hidden;}
 .sk-panel::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;}
 .sk-panel:nth-child(1)::after{background:var(--neon);}
@@ -222,6 +232,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
   <div class="nav-links" id="navLinks">
     <div class="nav-link active" onclick="go('home')">HOME</div>
     <div class="nav-link" onclick="go('journey')">EXPERIENCE</div>
+    <div class="nav-link" onclick="go('services')">SERVICES</div>
     <div class="nav-link" onclick="go('skills')">SKILLS</div>
     <div class="nav-link" onclick="go('projects')">PROJECTS</div>
     <div class="nav-link" onclick="go('awards')">CREDENTIALS</div>
@@ -238,7 +249,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
   <div class="hero-eyebrow">&gt; SOFTWARE · DATA · AI AUTOMATION</div>
   <h1 class="hero-name">SOURABH<br>SINGH</h1>
   <div class="hero-role">Software Developer at Brown Anatomy · <span>MCA graduate building AI, data, and web products</span></div>
-  <p class="hero-summary">I build practical software that connects data, automation, and user-facing workflows: live web tools, reporting pipelines, AI-assisted operations, and full-stack prototypes. This portfolio highlights current software development work, shipped projects, source code, and live demos so recruiters can verify the output directly.</p>
+  <p class="hero-summary">I build practical software for businesses and teams: websites, automation workflows, dashboards, AI-assisted tools, and full-stack prototypes. This portfolio works for both clients and recruiters by showing services, shipped projects, source code, and live demos.</p>
   <div class="hero-tags">
     <span class="hero-tag hot">Python</span>
     <span class="hero-tag hot">Machine Learning</span>
@@ -255,8 +266,8 @@ textarea.form-inp{resize:vertical;min-height:90px;}
     <div class="hstat"><div class="hstat-val">2026</div><div class="hstat-lbl">MCA GRAD</div></div>
   </div>
   <div class="hero-cta">
-    <button class="btn btn-glow" onclick="go('projects')">VIEW ENGINEERING WORK</button>
-    <button class="btn btn-outline" onclick="go('journey')">EXPERIENCE</button>
+    <button class="btn btn-glow" onclick="go('services')">SERVICES FOR CLIENTS</button>
+    <button class="btn btn-outline" onclick="go('projects')">VIEW PROJECTS</button>
     <button class="btn btn-outline" onclick="go('contact')">CONTACT</button>
   </div>
 </section>
@@ -314,6 +325,42 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="t-pills"><span class="t-pill">Python</span><span class="t-pill">SQL</span><span class="t-pill">Java</span><span class="t-pill">C</span><span class="t-pill">Data Science</span></div>
     </div>
   </div>
+</section>
+
+<!-- SERVICES -->
+<section id="s-services">
+  <div class="sec-head">
+    <div class="sec-label">// CLIENT WORK</div>
+    <div class="sec-title">SERVICES</div>
+    <div class="sec-line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-kicker">01</div>
+      <div class="service-title">BUSINESS WEBSITES</div>
+      <div class="service-copy">Clean, responsive websites for local businesses, personal brands, service providers, and product pages with strong structure and conversion-focused sections.</div>
+      <div class="service-list"><span class="service-pill">Landing Pages</span><span class="service-pill">Portfolio Sites</span><span class="service-pill">WordPress</span><span class="service-pill">Shopify</span></div>
+    </div>
+    <div class="service-card">
+      <div class="service-kicker">02</div>
+      <div class="service-title">AUTOMATION WORKFLOWS</div>
+      <div class="service-copy">Automations that reduce manual work across forms, Google Sheets, email drafts, webhooks, lead handling, reminders, and internal business operations.</div>
+      <div class="service-list"><span class="service-pill">n8n</span><span class="service-pill">Make</span><span class="service-pill">Google Sheets</span><span class="service-pill">Webhooks</span></div>
+    </div>
+    <div class="service-card">
+      <div class="service-kicker">03</div>
+      <div class="service-title">DASHBOARDS & DATA WORK</div>
+      <div class="service-copy">Data cleaning, reporting, dashboards, and business visibility tools for clients who need their numbers organized and easier to understand.</div>
+      <div class="service-list"><span class="service-pill">Power BI</span><span class="service-pill">Tableau</span><span class="service-pill">SQL</span><span class="service-pill">Excel</span></div>
+    </div>
+    <div class="service-card">
+      <div class="service-kicker">04</div>
+      <div class="service-title">AI TOOLS & PROTOTYPES</div>
+      <div class="service-copy">Small AI-enabled tools and prototypes for content workflows, internal productivity, customer responses, and proof-of-concept business ideas.</div>
+      <div class="service-list"><span class="service-pill">AI Workflows</span><span class="service-pill">Python</span><span class="service-pill">APIs</span><span class="service-pill">MVPs</span></div>
+    </div>
+  </div>
+  <div class="client-note">For clients: share the business goal, current process, examples you like, and deadline. I can suggest a practical scope, build the first version, and keep the solution simple enough for you or your team to use after delivery.</div>
 </section>
 
 <!-- SKILLS -->
@@ -405,7 +452,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
     </div>
     <div class="contact-form-wrap">
       <div class="contact-card-title">RECRUITER SNAPSHOT</div>
-      <p class="contact-card-copy">Currently working as a Software Developer at Brown Anatomy since March 28, 2026, with MCA completed in May 2026. Open to strong software engineering, AI automation, data analytics, and full-stack opportunities. Strongest evidence: live GitHub projects, software development experience, automation work, and web delivery.</p>
+      <p class="contact-card-copy">Currently working as a Software Developer at Brown Anatomy since March 28, 2026, with MCA completed in May 2026. Available for selected freelance/client work including websites, automation workflows, dashboards, AI tools, and full-stack prototypes.</p>
       <div class="contact-actions">
         <a class="contact-action primary" href="mailto:sourabhsingh0142003@gmail.com">EMAIL ME</a>
         <a class="contact-action" href="https://github.com/Sourabh1975" target="_blank" rel="noopener">GITHUB</a>
@@ -477,7 +524,7 @@ window.go=function(id){
   document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
   const sec=document.getElementById('s-'+id);
   if(sec){sec.style.display='block';}
-  const map={home:0,journey:1,skills:2,projects:3,awards:4,contact:5};
+  const map={home:0,journey:1,services:2,skills:3,projects:4,awards:5,contact:6};
   const links=document.querySelectorAll('.nav-link');
   if(map[id]!==undefined&&links[map[id]])links[map[id]].classList.add('active');
   document.getElementById('navLinks').classList.remove('open');
@@ -485,7 +532,7 @@ window.go=function(id){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 const initialSection=(window.location.hash||'#home').replace('#','');
-go(['home','journey','skills','projects','awards','contact'].includes(initialSection)?initialSection:'home');
+go(['home','journey','services','skills','projects','awards','contact'].includes(initialSection)?initialSection:'home');
 
 const GITHUB_USER='Sourabh1975';
 const PROJECT_GRID=document.querySelector('#s-projects .proj-grid');
