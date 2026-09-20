@@ -127,6 +127,14 @@ section.active{display:block;}
 .proj-metric::before{content:'↑ ';}
 .proj-tools-row{display:flex;flex-wrap:wrap;gap:6px;}
 .ptool{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 10px;border:1px solid rgba(255,196,71,0.2);color:rgba(255,196,71,0.7);letter-spacing:1px;}
+.proj-preview{height:180px;margin-top:18px;border:1px solid rgba(0,229,255,0.12);background:rgba(0,229,255,0.03);overflow:hidden;position:relative;}
+.proj-preview iframe{width:100%;height:360px;border:0;transform:scale(.5);transform-origin:top left;pointer-events:none;background:#fff;}
+.proj-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.proj-link{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;text-decoration:none;padding:10px 14px;border:1px solid var(--border2);color:var(--muted);transition:all .25s;}
+.proj-link:hover{border-color:var(--border);color:var(--text);}
+.proj-link.live{border-color:rgba(0,229,255,.45);color:var(--neon);background:rgba(0,229,255,.07);}
+.proj-empty{border:1px solid var(--border2);background:var(--glass);padding:24px;color:var(--muted);font-size:13px;line-height:1.7;}
+.proj-loading{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--neon);border:1px solid var(--border2);background:var(--glass);padding:24px;}
 
 .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
 .aw-card{border:1px solid var(--border2);background:var(--glass);padding:20px;display:flex;gap:14px;align-items:flex-start;transition:all 0.3s;}
@@ -340,33 +348,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
     <div class="sec-line"></div>
   </div>
   <div class="proj-grid">
-    <div class="proj-card">
-      <div class="proj-top"><span class="proj-badge epic">EPIC QUEST</span><span class="proj-num">001</span></div>
-      <div class="proj-body">
-        <div class="proj-name">END-TO-END DATA ANALYTICS PIPELINE</div>
-        <div class="proj-desc">Engineered a robust ETL workflow to collect, cleanse, and process 10,000+ records. Designed Power BI and Tableau dashboards applying UI/UX best practices, reducing manual reporting time by 40%. Executed internal testing to ensure full data integrity.</div>
-        <div class="proj-metrics"><span class="proj-metric">40% time saved</span><span class="proj-metric">10K+ records processed</span></div>
-        <div class="proj-tools-row"><span class="ptool">PYTHON</span><span class="ptool">PANDAS</span><span class="ptool">NUMPY</span><span class="ptool">SQL</span><span class="ptool">POWER BI</span><span class="ptool">TABLEAU</span></div>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-top"><span class="proj-badge legend">LEGENDARY</span><span class="proj-num">002</span></div>
-      <div class="proj-body">
-        <div class="proj-name">DIABETES RISK PREDICTION SYSTEM</div>
-        <div class="proj-desc">Assembled a data-driven ML pipeline with full data collection, preprocessing, and feature selection using Python and Scikit-learn. Applied statistical programming to achieve 92% predictive accuracy on structured health datasets.</div>
-        <div class="proj-metrics"><span class="proj-metric">92% accuracy</span><span class="proj-metric">Full ML pipeline</span></div>
-        <div class="proj-tools-row"><span class="ptool">PYTHON</span><span class="ptool">PANDAS</span><span class="ptool">SCIKIT-LEARN</span><span class="ptool">STATISTICS</span></div>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-top"><span class="proj-badge legend">LEGENDARY</span><span class="proj-num">003</span></div>
-      <div class="proj-body">
-        <div class="proj-name">AI-DRIVEN EMAIL AUTOMATION SYSTEM</div>
-        <div class="proj-desc">Architected a fully automated lead-handling workflow — form submissions instantly captured into Google Sheets, Generative AI analyzes queries and generates personalized email drafts in real-time. Saved 10+ hours/week and reduced customer response time to under 1 minute.</div>
-        <div class="proj-metrics"><span class="proj-metric">10h+ saved/week</span><span class="proj-metric">&lt;1 min response time</span></div>
-        <div class="proj-tools-row"><span class="ptool">N8N</span><span class="ptool">MAKE.COM</span><span class="ptool">GEN AI</span><span class="ptool">GOOGLE SHEETS</span><span class="ptool">WEBHOOKS</span></div>
-      </div>
-    </div>
+    <div class="proj-loading" id="projectsLoading">SYNCING GITHUB PROJECTS...</div>
   </div>
 </section>
 
@@ -398,7 +380,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="c-row"><div class="c-ico">@</div><div><div class="c-lbl">EMAIL</div><div class="c-val">sourabhsingh0142003&#64;gmail&#46;com</div></div></div>
       <div class="c-row"><div class="c-ico">#</div><div><div class="c-lbl">PHONE</div><div class="c-val">+91 7863000435</div></div></div>
       <div class="c-row"><div class="c-ico">in</div><div><div class="c-lbl">LINKEDIN</div><div class="c-val">sourabh-singh-95145221b</div></div></div>
-      <div class="c-row"><div class="c-ico">gh</div><div><div class="c-lbl">GITHUB</div><div class="c-val">github.com/sourabh014</div></div></div>
+      <div class="c-row"><div class="c-ico">gh</div><div><div class="c-lbl">GITHUB</div><div class="c-val">github.com/Sourabh1975</div></div></div>
       <div class="c-row"><div class="c-ico">⌖</div><div><div class="c-lbl">LOCATION</div><div class="c-val">Dehradun, Uttarakhand, India</div></div></div>
     </div>
     <div class="contact-form-wrap">
@@ -482,7 +464,77 @@ window.go=function(id){
   document.getElementById('hamburger').classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-go('home');
+const initialSection=(window.location.hash||'#home').replace('#','');
+go(['home','journey','skills','projects','awards','contact'].includes(initialSection)?initialSection:'home');
+
+const GITHUB_USER='Sourabh1975';
+const PROJECT_GRID=document.querySelector('#s-projects .proj-grid');
+
+function cleanProjectName(name){
+  return name.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+}
+
+function escapeHtml(value){
+  return String(value||'').replace(/[&<>"']/g,char=>({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#39;'
+  }[char]));
+}
+
+function projectLiveUrl(repo){
+  if(repo.homepage && /^https?:\/\//i.test(repo.homepage)) return repo.homepage;
+  if(repo.has_pages) return `https://${GITHUB_USER.toLowerCase()}.github.io/${repo.name}/`;
+  return '';
+}
+
+function renderProjectCard(repo,index){
+  const liveUrl=projectLiveUrl(repo);
+  const tools=[repo.language,...(repo.topics||[])].filter(Boolean).slice(0,6);
+  const updated=new Date(repo.updated_at).toLocaleDateString('en-IN',{month:'short',year:'numeric'});
+  const badge=liveUrl?'LIVE BUILD':'SOURCE CODE';
+  const badgeClass=liveUrl?'legend':'epic';
+  const desc=repo.description||'GitHub project by Sourabh Singh. Open the repository to explore the complete source code, setup details, and latest updates.';
+  const safeName=escapeHtml(cleanProjectName(repo.name));
+  const safeDesc=escapeHtml(desc);
+  const safeLanguage=escapeHtml(repo.language||'Multi-stack');
+  const toolHtml=tools.length?tools.map(t=>`<span class="ptool">${escapeHtml(String(t).toUpperCase())}</span>`).join(''):'<span class="ptool">GITHUB</span>';
+  const previewHtml=liveUrl?`<div class="proj-preview"><iframe src="${liveUrl}" loading="lazy" title="${escapeHtml(repo.name)} live preview"></iframe></div>`:'';
+  return `
+    <div class="proj-card" onclick="window.open('${liveUrl||repo.html_url}','_blank','noopener')">
+      <div class="proj-top"><span class="proj-badge ${badgeClass}">${badge}</span><span class="proj-num">${String(index+1).padStart(3,'0')}</span></div>
+      <div class="proj-body">
+        <div class="proj-name">${safeName}</div>
+        <div class="proj-desc">${safeDesc}</div>
+        <div class="proj-metrics"><span class="proj-metric">Updated ${updated}</span><span class="proj-metric">${safeLanguage}</span></div>
+        <div class="proj-tools-row">${toolHtml}</div>
+        ${previewHtml}
+        <div class="proj-actions">
+          <a class="proj-link" href="${repo.html_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">GITHUB</a>
+          ${liveUrl?`<a class="proj-link live" href="${liveUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">LIVE DEMO</a>`:''}
+        </div>
+      </div>
+    </div>`;
+}
+
+async function loadGitHubProjects(){
+  try{
+    const res=await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`);
+    if(!res.ok) throw new Error('GitHub API unavailable');
+    const repos=(await res.json())
+      .filter(repo=>!repo.fork&&!repo.archived&&repo.name.toLowerCase()!=='portfolio')
+      .sort((a,b)=>(projectLiveUrl(b)?1:0)-(projectLiveUrl(a)?1:0)||new Date(b.updated_at)-new Date(a.updated_at));
+    PROJECT_GRID.innerHTML=repos.length
+      ? repos.map(renderProjectCard).join('')
+      : '<div class="proj-empty">No public GitHub projects found yet.</div>';
+  }catch(err){
+    PROJECT_GRID.innerHTML='<div class="proj-empty">GitHub projects could not be loaded right now. Please refresh the page or open GitHub directly: github.com/Sourabh1975</div>';
+  }
+}
+
+loadGitHubProjects();
 </script>
 </body>
 </html>
