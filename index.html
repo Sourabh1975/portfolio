@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sourabh Singh — Portfolio</title>
-<meta name="description" content="Sourabh Singh portfolio: AI automation, data analytics, full-stack prototypes, and GitHub projects with live demos.">
+<meta name="description" content="Sourabh Singh personal portfolio: journey, capabilities, achievements, projects, and the proof behind his work in software, automation, data, and AI.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
 
 
 
@@ -27,7 +27,7 @@
 }
 
 
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;background:#e5effa;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;}
 
 #canvas-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
@@ -42,7 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .pulse-dot{width:6px;height:6px;border-radius:50%;background:var(--neon3);animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(184,255,87,0.4);}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(184,255,87,0);}}
 
-section{position:relative;z-index:1;min-height:100vh;padding:100px 40px 80px;max-width:1000px;margin:0 auto;display:none;}
+section{position:relative;z-index:1;min-height:100vh;padding:100px 40px 80px;max-width:1000px;margin:0 auto;display:block;scroll-margin-top:92px;}
 section.active{display:block;}
 
 #s-home{display:flex;flex-direction:column;justify-content:center;padding-top:80px;}
@@ -67,7 +67,7 @@ section.active{display:block;}
 .btn-outline:hover{border-color:var(--border);color:var(--text);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
-.sec-head{margin-bottom:48px;}
+.sec-head{margin-bottom:34px;}
 .sec-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--neon2);letter-spacing:4px;margin-bottom:10px;}
 .sec-title{font-family:'Orbitron',monospace;font-size:28px;font-weight:700;color:#fff;letter-spacing:2px;}
 .sec-line{width:60px;height:2px;background:linear-gradient(90deg,var(--neon),transparent);margin-top:14px;}
@@ -99,6 +99,45 @@ section.active{display:block;}
 .service-list{display:flex;flex-wrap:wrap;gap:6px;}
 .service-pill{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border:1px solid var(--border2);color:rgba(232,244,255,.56);letter-spacing:1px;}
 .client-note{border:1px solid rgba(255,196,71,.18);background:rgba(255,196,71,.04);padding:20px 22px;color:rgba(232,244,255,.68);font-size:13px;line-height:1.8;}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.process-card{border:1px solid var(--border2);background:var(--glass);padding:20px;transition:all .25s;}
+.process-card:hover{border-color:rgba(255,196,71,.3);background:rgba(255,196,71,.035);}
+.process-step{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:10px;}
+.process-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
+.process-copy{font-size:13px;line-height:1.75;color:var(--muted);}
+.section-intro{max-width:720px;color:var(--muted);font-size:14px;line-height:1.75;margin:-26px 0 30px;}
+.section-lead{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch;margin:-24px 0 28px;}
+.section-lead .section-intro{margin:0;max-width:none;}
+.section-aside{border:1px solid var(--border2);background:var(--glass);padding:18px 20px;color:var(--muted);font-size:13px;line-height:1.7;}
+.mini-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
+.mini-metric{border:1px solid var(--border2);background:var(--glass);padding:16px 18px;}
+.mini-value{font-family:'Orbitron',monospace;font-size:22px;color:#fff;margin-bottom:4px;}
+.mini-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.proof-card{border:1px solid var(--border2);background:var(--glass);padding:24px;transition:all .25s;}
+.proof-card:hover{border-color:var(--border);background:rgba(0,229,255,.04);transform:translateY(-2px);}
+.proof-kicker{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--neon);letter-spacing:2px;margin-bottom:18px;}
+.proof-title{font-family:'Orbitron',monospace;font-size:13px;color:#fff;letter-spacing:1px;margin-bottom:12px;}
+.proof-copy{font-size:13px;color:var(--muted);line-height:1.75;}
+.proof-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.proof-pill{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border:1px solid var(--border2);color:rgba(232,244,255,.56);letter-spacing:1px;}
+.wide-note{border:1px solid var(--border2);background:var(--glass);padding:22px 24px;margin-top:18px;color:var(--muted);font-size:13px;line-height:1.8;}
+.mindset-panel{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;}
+.mindset-box{border:1px solid var(--border2);background:var(--glass);padding:22px;}
+.mindset-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;}
+.mindset-list{display:grid;gap:10px;color:var(--muted);font-size:13px;line-height:1.65;}
+.mindset-list span{display:block;border-left:2px solid var(--border);padding-left:10px;}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.work-card{border:1px solid var(--border2);background:var(--glass);padding:26px;position:relative;overflow:hidden;transition:all .25s;}
+.work-card.featured{border-color:rgba(0,229,255,.28);}
+.work-card:hover{border-color:var(--border);background:rgba(0,229,255,.04);transform:translateY(-2px);}
+.work-meta{display:flex;justify-content:space-between;gap:16px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--neon);letter-spacing:2px;margin-bottom:18px;}
+.work-title{font-family:'Orbitron',monospace;font-size:15px;color:#fff;letter-spacing:1px;margin-bottom:8px;}
+.work-subtitle{font-size:13px;color:var(--gold);font-weight:600;margin-bottom:14px;}
+.work-copy{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:16px;}
+.work-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.work-tag{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border:1px solid var(--border2);color:rgba(232,244,255,.56);letter-spacing:1px;}
+@media(max-width:800px){.section-lead,.proof-grid,.work-grid,.mindset-panel{grid-template-columns:1fr;}.mini-metrics{grid-template-columns:1fr;}}
 .sk-panel{padding:24px;border:1px solid var(--border2);background:var(--glass);position:relative;overflow:hidden;}
 .sk-panel::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;}
 .sk-panel:nth-child(1)::after{background:var(--neon);}
@@ -221,6 +260,616 @@ textarea.form-inp{resize:vertical;min-height:90px;}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 @media(max-width:700px){.hamburger{display:flex;}}
+
+/* Personal capability portfolio theme overrides */
+:root{
+  --neon:#1457e6;
+  --neon2:#08756f;
+  --neon3:#15753a;
+  --gold:#9a4f00;
+  --bg:#eef4fb;
+  --bg2:#ffffff;
+  --bg3:#dfe9f6;
+  --glass:#ffffff;
+  --border:rgba(20,87,230,0.26);
+  --border2:#cbd7e8;
+  --text:#0b1220;
+  --muted:#40516a;
+}
+
+body{
+  background-color:#e5effa;
+  background-image:
+    radial-gradient(circle at 16% 4%, rgba(20,87,230,.16), transparent 34rem),
+    radial-gradient(circle at 84% 10%, rgba(8,117,111,.1), transparent 32rem),
+    linear-gradient(135deg,#e9f3ff 0%,#dfeaf7 48%,#eaf2fb 100%);
+  background-attachment:fixed,fixed,fixed;
+  color:var(--text);
+  font-family:'Manrope','Inter',sans-serif;
+}
+#canvas-bg{display:none;}
+
+nav{
+  background:rgba(248,251,255,.95);
+  border-bottom:1px solid var(--border2);
+  box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+.nav-logo{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0b1220;
+  letter-spacing:.5px;
+  font-size:15px;
+  font-weight:900;
+}
+.nav-links{
+  border:1px solid var(--border2);
+  border-radius:8px;
+  background:#edf4fc;
+}
+.nav-link{
+  font-family:'Manrope','Inter',sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.4px;
+  color:#4b5d76;
+  border-right:1px solid var(--border2);
+  padding:9px 14px;
+}
+.nav-link:hover,.nav-link.active{
+  color:#0b1220;
+  background:#dfeaff;
+}
+.nav-status{
+  font-family:'Manrope','Inter',sans-serif;
+  color:#08756f;
+  letter-spacing:.4px;
+  font-size:11px;
+  font-weight:700;
+}
+.pulse-dot{background:#08756f;animation:none;}
+.theme-toggle{
+  font-family:'Manrope','Inter',sans-serif;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+  padding:9px 12px;
+  border:1px solid var(--border2);
+  border-radius:8px;
+  color:#243248;
+  background:#f8fbff;
+  cursor:pointer;
+  transition:all .2s;
+}
+.theme-toggle:hover{
+  border-color:#1457e6;
+  color:#0f49c9;
+  background:#eaf2ff;
+}
+.nav-actions{display:flex;align-items:center;gap:14px;}
+
+section{
+  max-width:1120px;
+  padding:72px 36px 52px;
+  min-height:auto;
+  display:block;
+  scroll-margin-top:76px;
+}
+#s-home{min-height:auto;padding-top:88px;}
+.hero-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:34px;align-items:center;}
+.hero-copy{min-width:0;}
+.profile-panel{
+  position:relative;
+  min-height:372px;
+  border:1px solid var(--border2);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(248,252,255,.98),rgba(235,244,253,.96));
+  box-shadow:0 24px 64px rgba(15,23,42,.12);
+  padding:20px;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+}
+.profile-panel::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(20,87,230,.06),transparent 42%);
+  pointer-events:none;
+}
+.profile-stage{
+  position:relative;
+  width:min(248px,100%);
+  min-height:auto;
+  display:grid;
+  place-items:center;
+  z-index:1;
+}
+.portrait-frame{
+  position:relative;
+  z-index:2;
+  width:238px;
+  height:300px;
+  padding:0;
+  border-radius:18px;
+  background:#f8fbff;
+  border:1px solid var(--border2);
+  box-shadow:0 22px 48px rgba(15,23,42,.18);
+}
+.profile-photo-wrap{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  border-radius:17px;
+  border:none;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#f8fafc;
+  box-shadow:none;
+}
+.profile-photo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none;
+}
+.profile-photo-wrap img[src]:not([src=""]){display:block;}
+.profile-photo-wrap:has(img[src]:not([src=""])) .profile-initials{display:none;}
+.profile-photo-wrap.has-photo img{display:block;}
+.profile-photo-wrap.has-photo .profile-initials{display:none;}
+.profile-initials{
+  font-family:'Sora','Inter',sans-serif;
+  font-size:54px;
+  font-weight:900;
+  color:#0f172a;
+  letter-spacing:-1px;
+}
+.profile-signature{
+  position:relative;
+  z-index:2;
+  margin-top:12px;
+  text-align:center;
+}
+.profile-signature strong{
+  display:block;
+  font-size:20px;
+  line-height:1.15;
+  font-weight:900;
+  color:#0f172a;
+  margin-bottom:3px;
+}
+.profile-signature span{
+  display:block;
+  color:#50627a;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.hero-eyebrow,.sec-label{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0f49c9;
+  letter-spacing:.1em;
+  font-weight:900;
+}
+.hero-name{
+  font-family:'Sora','Inter',sans-serif;
+  font-size:clamp(44px,7vw,82px);
+  letter-spacing:-2.2px;
+  background:none;
+  -webkit-text-fill-color:initial;
+  color:#07111f;
+}
+.hero-role{
+  color:#1d2d44;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:0;
+  max-width:820px;
+}
+.hero-role span{
+  color:#0f49c9;
+  font-weight:800;
+}
+.hero-summary{
+  color:#374860;
+  font-size:16px;
+  max-width:790px;
+  margin-bottom:20px;
+}
+.hero-tags{margin-bottom:26px;}
+.hero-stats-row{margin-bottom:34px;}
+.hero-tag,.t-pill,.service-pill,.proof-pill,.work-tag,.ptool{
+  font-family:'Manrope','Inter',sans-serif;
+  color:#26364d;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0;
+  border:1px solid #b8c7dc;
+  background:rgba(237,245,255,.96);
+  border-radius:999px;
+  box-shadow:0 1px 0 rgba(255,255,255,.85) inset;
+}
+.hero-tag.hot{
+  color:#0f49c9;
+  border-color:#98bcff;
+  background:#eaf2ff;
+}
+.hero-stats-row{gap:18px;}
+.hstat,.mini-metric,.section-aside,.service-card,.process-card,.proof-card,.wide-note,.mindset-box,.work-card,.sk-panel,.proj-card,.contact-left,.contact-form-wrap,.t-item{
+  background:linear-gradient(180deg,#f7fbff 0%,#eaf3fc 100%);
+  border:1px solid #b6c8de;
+  border-radius:10px;
+  box-shadow:0 18px 44px rgba(15,23,42,.1);
+}
+.hstat::before{background:#1457e6;}
+.hstat-val{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0b1220;
+  letter-spacing:-.5px;
+}
+.hstat-lbl,.mini-label,.t-meta,.proj-metric,.proj-num,.service-kicker,.process-step,.proof-kicker,.work-meta,.c-lbl{
+  font-family:'Manrope','Inter',sans-serif;
+  color:#40516a;
+  letter-spacing:.05em;
+  font-weight:900;
+  font-size:10px;
+}
+
+.work-meta{
+  align-items:center;
+  color:#34445c;
+}
+
+.work-meta span:last-child{
+  color:#27436d;
+}
+
+.t-meta,.service-kicker,.proof-kicker,.process-step{
+  color:#415674;
+}
+.btn{
+  font-family:'Manrope','Inter',sans-serif;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:0;
+  border-radius:8px;
+  padding:14px 20px;
+}
+.btn-glow{
+  background:#1457e6;
+  border:1px solid #1457e6;
+  color:#fff;
+}
+.btn-glow:hover{
+  background:#0f49c9;
+  box-shadow:0 12px 26px rgba(20,87,230,.24);
+}
+.btn-outline{
+  background:#f8fbff;
+  border:1px solid #cbd5e1;
+  color:#243248;
+}
+.btn-outline:hover{
+  border-color:#1457e6;
+  color:#0f49c9;
+  background:#eaf2ff;
+}
+
+.sec-title{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0b1220;
+  letter-spacing:-1.1px;
+  font-size:32px;
+  font-weight:900;
+}
+.sec-line{background:#1457e6;}
+.timeline-wrap::before{background:#cbd7e8;}
+.t-item:hover,.service-card:hover,.process-card:hover,.proof-card:hover,.work-card:hover,.proj-card:hover{
+  border-color:#98bcff;
+  background:linear-gradient(180deg,#fbfdff 0%,#e8f2ff 100%);
+  transform:translateY(-2px);
+  box-shadow:0 24px 55px rgba(15,23,42,.13);
+}
+.t-dot{
+  background:#fff;
+  border-color:#1457e6!important;
+  border-radius:50%;
+  transform:none;
+}
+.t-type,.proj-badge{
+  font-family:'Manrope','Inter',sans-serif;
+  letter-spacing:.06em;
+  border-radius:999px;
+}
+.t-type.work,.t-type.edu,.proj-badge.epic,.proj-badge.legend{
+  color:#0f49c9;
+  border-color:#98bcff;
+  background:#eaf2ff;
+}
+.t-title,.mini-value,.service-title,.process-title,.proof-title,.mindset-title,.work-title,.proj-name,.contact-card-title,.aw-title{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0b1220;
+  letter-spacing:-.2px;
+}
+.t-company,.aw-src{color:#08756f;}
+.work-subtitle{
+  color:#8a4300;
+  font-weight:800;
+}
+.t-desc,.service-copy,.process-copy,.proof-copy,.wide-note,.mindset-list,.section-aside,.work-copy,.section-intro,.proj-desc,.contact-card-copy,.c-val{
+  color:#25364d;
+  font-size:14px;
+  line-height:1.85;
+}
+.client-note,.proj-note{
+  color:#25364d;
+  border-left:3px solid #1457e6;
+  border-top:1px solid #cbd7e8;
+  border-right:1px solid #cbd7e8;
+  border-bottom:1px solid #cbd7e8;
+  background:linear-gradient(180deg,#f7fbff 0%,#eaf3fc 100%);
+  border-radius:8px;
+  font-size:14px;
+  line-height:1.8;
+}
+.sk-cat{
+  font-family:'Sora','Inter',sans-serif;
+  color:#0f49c9!important;
+  letter-spacing:.05em;
+}
+.sk-row{color:#243248;}
+.sk-pct{font-family:'Manrope','Inter',sans-serif;color:#1457e6!important;}
+.sk-track{background:#d9e2ef;}
+.sk-fill,.sk-panel:nth-child(1) .sk-fill,.sk-panel:nth-child(2) .sk-fill,.sk-panel:nth-child(3) .sk-fill,.sk-panel:nth-child(4) .sk-fill{background:#1457e6;}
+.sk-panel::after{background:#1457e6!important;}
+.proj-preview{
+  border-color:#cbd7e8;
+  background:#f8fbff;
+  border-radius:8px;
+}
+.proj-link,.contact-action{
+  font-family:'Manrope','Inter',sans-serif;
+  letter-spacing:0;
+  font-weight:800;
+  border-radius:8px;
+  color:#243248;
+  background:#f8fbff;
+}
+.proj-link.live,.contact-action.primary{
+  border-color:#1457e6;
+  color:#fff;
+  background:#1457e6;
+}
+.proj-link:hover,.contact-action:hover{
+  border-color:#1457e6;
+  color:#0f49c9;
+  background:#eaf2ff;
+}
+.c-ico{
+  border-color:#cbd7e8;
+  color:#1457e6;
+  background:#f8fbff;
+  border-radius:8px;
+}
+.footer-bar{
+  position:relative;
+  background:rgba(248,251,255,.94);
+  border-top:1px solid #cbd7e8;
+  box-shadow:0 -10px 30px rgba(15,23,42,.05);
+}
+.f-left,.f-right{
+  font-family:'Manrope','Inter',sans-serif;
+  color:#52647c;
+  letter-spacing:.04em;
+  font-weight:700;
+}
+.hamburger span{background:#0f172a;}
+
+body[data-theme="dark"]{
+  --neon:#21d8ff;
+  --neon2:#ff4fa3;
+  --neon3:#a6ff3d;
+  --gold:#ffb84d;
+  --bg:#050912;
+  --bg2:#08111f;
+  --bg3:#0a1728;
+  --glass:rgba(9,17,31,.82);
+  --border:rgba(33,216,255,.24);
+  --border2:rgba(148,163,184,.16);
+  --text:#edf7ff;
+  --muted:#92a4ba;
+  background:
+    radial-gradient(circle at 15% 5%, rgba(33,216,255,.09), transparent 28%),
+    radial-gradient(circle at 85% 0%, rgba(255,79,163,.08), transparent 28%),
+    linear-gradient(180deg,#050912 0%,#07111f 100%);
+  color:var(--text);
+}
+body[data-theme="dark"] #canvas-bg{display:block;opacity:.9;}
+body[data-theme="dark"] nav{
+  background:rgba(5,9,18,.88);
+  border-bottom:1px solid rgba(33,216,255,.12);
+  box-shadow:0 12px 36px rgba(0,0,0,.34);
+}
+body[data-theme="dark"] .nav-logo,
+body[data-theme="dark"] .hero-name,
+body[data-theme="dark"] .sec-title,
+body[data-theme="dark"] .hstat-val,
+body[data-theme="dark"] .mini-value,
+body[data-theme="dark"] .t-title,
+body[data-theme="dark"] .service-title,
+body[data-theme="dark"] .process-title,
+body[data-theme="dark"] .proof-title,
+body[data-theme="dark"] .mindset-title,
+body[data-theme="dark"] .work-title,
+body[data-theme="dark"] .proj-name,
+body[data-theme="dark"] .contact-card-title,
+body[data-theme="dark"] .aw-title{color:#f8fbff;}
+body[data-theme="dark"] .hero-name{
+  background:linear-gradient(135deg,#fff 15%,#e7fbff 42%,var(--neon) 68%,var(--neon2) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:0;
+}
+body[data-theme="dark"] .hero-role{color:#dbe7f5;}
+body[data-theme="dark"] .hero-role span{color:var(--neon);}
+body[data-theme="dark"] .hero-summary,
+body[data-theme="dark"] .t-desc,
+body[data-theme="dark"] .service-copy,
+body[data-theme="dark"] .process-copy,
+body[data-theme="dark"] .proof-copy,
+body[data-theme="dark"] .wide-note,
+body[data-theme="dark"] .mindset-list,
+body[data-theme="dark"] .section-aside,
+body[data-theme="dark"] .work-copy,
+body[data-theme="dark"] .section-intro,
+body[data-theme="dark"] .proj-desc,
+body[data-theme="dark"] .contact-card-copy,
+body[data-theme="dark"] .c-val{color:#9fb0c6;}
+body[data-theme="dark"] .nav-links,
+body[data-theme="dark"] .theme-toggle,
+body[data-theme="dark"] .btn-outline,
+body[data-theme="dark"] .hero-tag,
+body[data-theme="dark"] .t-pill,
+body[data-theme="dark"] .service-pill,
+body[data-theme="dark"] .proof-pill,
+body[data-theme="dark"] .work-tag,
+body[data-theme="dark"] .ptool,
+body[data-theme="dark"] .proj-link,
+body[data-theme="dark"] .contact-action{
+  background:rgba(8,17,31,.78);
+  border-color:rgba(148,163,184,.18);
+  color:#9fb0c6;
+}
+body[data-theme="dark"] .nav-link{color:#8393aa;border-right-color:rgba(148,163,184,.16);}
+body[data-theme="dark"] .nav-link:hover,
+body[data-theme="dark"] .nav-link.active{
+  color:#dff9ff;
+  background:rgba(33,216,255,.1);
+}
+body[data-theme="dark"] .hero-tag.hot{
+  color:#dff9ff;
+  border-color:rgba(33,216,255,.42);
+  background:rgba(33,216,255,.1);
+}
+body[data-theme="dark"] .hstat,
+body[data-theme="dark"] .mini-metric,
+body[data-theme="dark"] .section-aside,
+body[data-theme="dark"] .service-card,
+body[data-theme="dark"] .process-card,
+body[data-theme="dark"] .proof-card,
+body[data-theme="dark"] .wide-note,
+body[data-theme="dark"] .mindset-box,
+body[data-theme="dark"] .work-card,
+body[data-theme="dark"] .sk-panel,
+body[data-theme="dark"] .proj-card,
+body[data-theme="dark"] .contact-left,
+body[data-theme="dark"] .contact-form-wrap,
+body[data-theme="dark"] .t-item{
+  background:rgba(8,17,31,.78);
+  border-color:rgba(148,163,184,.16);
+  box-shadow:0 18px 54px rgba(0,0,0,.26);
+}
+body[data-theme="dark"] .t-item:hover,
+body[data-theme="dark"] .service-card:hover,
+body[data-theme="dark"] .process-card:hover,
+body[data-theme="dark"] .proof-card:hover,
+body[data-theme="dark"] .work-card:hover,
+body[data-theme="dark"] .proj-card:hover{
+  border-color:rgba(33,216,255,.35);
+  background:rgba(11,25,45,.9);
+}
+body[data-theme="dark"] .client-note,
+body[data-theme="dark"] .proj-note{
+  color:#aab8c8;
+  background:rgba(8,17,31,.72);
+  border-color:rgba(33,216,255,.18);
+  border-left-color:var(--neon);
+}
+body[data-theme="dark"] .btn-glow,
+body[data-theme="dark"] .proj-link.live,
+body[data-theme="dark"] .contact-action.primary{
+  background:rgba(33,216,255,.12);
+  color:#dff9ff;
+  border-color:rgba(33,216,255,.55);
+}
+body[data-theme="dark"] .btn-glow:hover,
+body[data-theme="dark"] .proj-link.live:hover,
+body[data-theme="dark"] .contact-action.primary:hover{
+  background:rgba(33,216,255,.2);
+  color:#fff;
+}
+body[data-theme="dark"] .theme-toggle:hover,
+body[data-theme="dark"] .btn-outline:hover,
+body[data-theme="dark"] .proj-link:hover,
+body[data-theme="dark"] .contact-action:hover{
+  color:#dff9ff;
+  border-color:rgba(33,216,255,.45);
+  background:rgba(33,216,255,.1);
+}
+body[data-theme="dark"] .hstat::before,
+body[data-theme="dark"] .sec-line,
+body[data-theme="dark"] .sk-fill,
+body[data-theme="dark"] .sk-panel::after{background:var(--neon)!important;}
+body[data-theme="dark"] .hero-eyebrow,
+body[data-theme="dark"] .sec-label,
+body[data-theme="dark"] .service-kicker,
+body[data-theme="dark"] .proof-kicker,
+body[data-theme="dark"] .work-meta{color:var(--neon);}
+body[data-theme="dark"] .nav-status{color:var(--neon3);}
+body[data-theme="dark"] .pulse-dot{background:var(--neon3);}
+body[data-theme="dark"] .work-subtitle,
+body[data-theme="dark"] .t-company,
+body[data-theme="dark"] .aw-src{color:var(--gold);}
+body[data-theme="dark"] .timeline-wrap::before{background:linear-gradient(180deg,var(--neon),rgba(255,79,163,.45),rgba(148,163,184,.12));}
+body[data-theme="dark"] .t-dot{background:#050912;border-color:var(--neon)!important;}
+body[data-theme="dark"] .c-ico{
+  background:rgba(33,216,255,.08);
+  border-color:rgba(33,216,255,.25);
+  color:var(--neon);
+}
+body[data-theme="dark"] .footer-bar{
+  background:rgba(5,9,18,.92);
+  border-top-color:rgba(33,216,255,.12);
+}
+body[data-theme="dark"] .f-left,
+body[data-theme="dark"] .f-right{color:#8393aa;}
+body[data-theme="dark"] .hamburger span{background:#edf7ff;}
+body[data-theme="dark"] .profile-panel{
+  background:rgba(8,17,31,.78);
+  border-color:rgba(148,163,184,.16);
+  box-shadow:0 22px 60px rgba(0,0,0,.24);
+}
+body[data-theme="dark"] .profile-panel::before{background:linear-gradient(180deg,rgba(33,216,255,.055),transparent 42%);}
+body[data-theme="dark"] .portrait-frame{
+  background:rgba(5,9,18,.92);
+  border-color:rgba(148,163,184,.18);
+  box-shadow:0 24px 50px rgba(0,0,0,.3);
+}
+body[data-theme="dark"] .profile-photo-wrap{
+  background:rgba(5,9,18,.92);
+  box-shadow:none;
+}
+body[data-theme="dark"] .profile-initials{color:#f8fbff;}
+body[data-theme="dark"] .profile-signature strong{color:#f8fbff;}
+body[data-theme="dark"] .profile-signature span{color:#9fb0c6;}
+
+@media(max-width:700px){
+  .nav-links{
+    background:#fff;
+    border-color:#dbe3ef;
+  }
+  .nav-link{font-size:12px;}
+  section{padding:58px 18px 44px;}
+  #s-home{padding-top:78px;}
+  .hero-shell{grid-template-columns:1fr;gap:28px;}
+  .profile-panel{min-height:auto;padding:18px;}
+  .profile-stage{width:min(230px,100%);}
+  .portrait-frame{width:210px;height:264px;}
+  .footer-bar{padding:8px 16px;}
+}
 </style>
 </head>
 <body>
@@ -231,14 +880,18 @@ textarea.form-inp{resize:vertical;min-height:90px;}
   <div class="nav-logo">S.SINGH</div>
   <div class="nav-links" id="navLinks">
     <div class="nav-link active" onclick="go('home')">HOME</div>
-    <div class="nav-link" onclick="go('journey')">EXPERIENCE</div>
-    <div class="nav-link" onclick="go('services')">SERVICES</div>
-    <div class="nav-link" onclick="go('skills')">SKILLS</div>
-    <div class="nav-link" onclick="go('projects')">PROJECTS</div>
-    <div class="nav-link" onclick="go('awards')">CREDENTIALS</div>
+    <div class="nav-link" onclick="go('building')">DIRECTION</div>
+    <div class="nav-link" onclick="go('services')">CAPABILITIES</div>
+    <div class="nav-link" onclick="go('production')">REAL WORK</div>
+    <div class="nav-link" onclick="go('projects')">PROOF</div>
+    <div class="nav-link" onclick="go('awards')">MINDSET</div>
+    <div class="nav-link" onclick="go('journey')">ABOUT</div>
     <div class="nav-link" onclick="go('contact')">CONTACT</div>
   </div>
-  <div class="nav-status"><div class="pulse-dot"></div>OPEN TO WORK</div>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">DARK</button>
+    <div class="nav-status"><div class="pulse-dot"></div>PERSONAL PROFILE</div>
+  </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
@@ -246,37 +899,112 @@ textarea.form-inp{resize:vertical;min-height:90px;}
 
 <!-- HOME -->
 <section id="s-home" class="active">
-  <div class="hero-eyebrow">&gt; SOFTWARE · DATA · AI AUTOMATION</div>
-  <h1 class="hero-name">SOURABH<br>SINGH</h1>
-  <div class="hero-role">Software Developer at Brown Anatomy · <span>MCA graduate building AI, data, and web products</span></div>
-  <p class="hero-summary">I build practical software for businesses and teams: websites, automation workflows, dashboards, AI-assisted tools, and full-stack prototypes. This portfolio works for both clients and recruiters by showing services, shipped projects, source code, and live demos.</p>
-  <div class="hero-tags">
-    <span class="hero-tag hot">Python</span>
-    <span class="hero-tag hot">Machine Learning</span>
-    <span class="hero-tag hot">Power BI</span>
-    <span class="hero-tag">Tableau</span>
-    <span class="hero-tag">n8n · Make</span>
-    <span class="hero-tag">SQL · APIs</span>
-    <span class="hero-tag">MCA @ Graphic Era</span>
-  </div>
-  <div class="hero-stats-row">
-    <div class="hstat"><div class="hstat-val">15+</div><div class="hstat-lbl">WEB BUILDS</div></div>
-    <div class="hstat"><div class="hstat-val">20h</div><div class="hstat-lbl">SAVED/WEEK</div></div>
-    <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">LIVE DEMOS</div></div>
-    <div class="hstat"><div class="hstat-val">2026</div><div class="hstat-lbl">MCA GRAD</div></div>
-  </div>
-  <div class="hero-cta">
-    <button class="btn btn-glow" onclick="go('services')">SERVICES FOR CLIENTS</button>
-    <button class="btn btn-outline" onclick="go('projects')">VIEW PROJECTS</button>
-    <button class="btn btn-outline" onclick="go('contact')">CONTACT</button>
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">&gt; SOFTWARE DEVELOPER · BUILDER · PROBLEM SOLVER</div>
+      <h1 class="hero-name">SOURABH<br>SINGH</h1>
+      <div class="hero-role">Software developer building practical systems across <span>web, automation, data, AI, and e-commerce</span></div>
+      <p class="hero-summary">I turn unclear problems into working digital systems. This portfolio brings together the work I have built, managed, learned from, and improved across real projects, production environments, and personal experiments.</p>
+      <div class="hero-tags">
+        <span class="hero-tag hot">Python</span>
+        <span class="hero-tag hot">Machine Learning</span>
+        <span class="hero-tag hot">Power BI</span>
+        <span class="hero-tag">Tableau</span>
+        <span class="hero-tag">n8n · Make</span>
+        <span class="hero-tag">SQL · APIs</span>
+        <span class="hero-tag">Execution Mindset</span>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hstat"><div class="hstat-val">15+</div><div class="hstat-lbl">WEBSITES BUILT</div></div>
+        <div class="hstat"><div class="hstat-val">20h</div><div class="hstat-lbl">WORKFLOW SAVED</div></div>
+        <div class="hstat"><div class="hstat-val">5</div><div class="hstat-lbl">LIVE PROOFS</div></div>
+        <div class="hstat"><div class="hstat-val">4</div><div class="hstat-lbl">CORE AREAS</div></div>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-glow" onclick="go('building')">WHAT I'M BUILDING</button>
+        <button class="btn btn-outline" onclick="go('projects')">VIEW PROOF</button>
+        <button class="btn btn-outline" onclick="go('journey')">MY JOURNEY</button>
+      </div>
+    </div>
+    <div class="profile-panel">
+      <div class="profile-stage">
+        <div class="portrait-frame">
+          <div class="profile-photo-wrap" id="profilePhotoWrap">
+            <img id="profilePhoto" src="" alt="Sourabh Singh profile photo">
+            <div class="profile-initials">SS</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-signature">
+        <strong>Sourabh Singh</strong>
+        <span>Software Developer</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- JOURNEY -->
+<!-- BUILDING TOWARD -->
+<section id="s-building">
+  <div class="sec-head">
+    <div class="sec-label">// 01 - NOW</div>
+    <div class="sec-title">WHAT I AM BUILDING TOWARD</div>
+    <div class="sec-line"></div>
+  </div>
+  <div class="section-lead">
+    <p class="section-intro">This section shows the direction I am growing into: the kind of systems, products, and opportunities I want my skills to move toward.</p>
+    <div class="section-aside">My focus is simple: keep learning, keep building, and keep turning technical knowledge into visible outcomes that people can trust.</div>
+  </div>
+  <div class="mini-metrics">
+    <div class="mini-metric"><div class="mini-value">01</div><div class="mini-label">SYSTEMS MINDSET</div></div>
+    <div class="mini-metric"><div class="mini-value">02</div><div class="mini-label">REAL OUTPUT</div></div>
+    <div class="mini-metric"><div class="mini-value">03</div><div class="mini-label">LONG-TERM GROWTH</div></div>
+  </div>
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="proof-kicker">BUILDING</div>
+      <div class="proof-title">USEFUL DIGITAL SYSTEMS</div>
+      <div class="proof-copy">Better websites, e-commerce systems, internal tools, automations, dashboards, and practical AI workflows that solve real problems.</div>
+      <div class="proof-list"><span class="proof-pill">Websites</span><span class="proof-pill">Dashboards</span><span class="proof-pill">Internal Tools</span></div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-kicker">DEEPENING</div>
+      <div class="proof-title">TECHNICAL DEPTH</div>
+      <div class="proof-copy">System design thinking, cleaner software architecture, APIs, data workflows, automation logic, and production-grade development habits.</div>
+      <div class="proof-list"><span class="proof-pill">APIs</span><span class="proof-pill">Data Flow</span><span class="proof-pill">Architecture</span></div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-kicker">OPEN TO</div>
+      <div class="proof-title">AMBITIOUS WORK</div>
+      <div class="proof-copy">Interesting products, technical collaborations, strong teams, meaningful business problems, and ideas worth turning into reality.</div>
+      <div class="proof-list"><span class="proof-pill">Products</span><span class="proof-pill">Teams</span><span class="proof-pill">Ideas</span></div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-kicker">LEARNING</div>
+      <div class="proof-title">AI + AUTOMATION PRACTICE</div>
+      <div class="proof-copy">Using AI and workflow tools to reduce repetitive work, create smarter interfaces, and explore how modern software can move faster.</div>
+      <div class="proof-list"><span class="proof-pill">n8n</span><span class="proof-pill">Make</span><span class="proof-pill">AI Tools</span></div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-kicker">STRENGTHENING</div>
+      <div class="proof-title">DATA-DRIVEN THINKING</div>
+      <div class="proof-copy">Turning raw information into dashboards, reports, insights, and practical decisions through Python, SQL, Excel, Power BI, and Tableau.</div>
+      <div class="proof-list"><span class="proof-pill">Python</span><span class="proof-pill">SQL</span><span class="proof-pill">Power BI</span></div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-kicker">BECOMING</div>
+      <div class="proof-title">A RELIABLE BUILDER</div>
+      <div class="proof-copy">Someone who can understand the problem, communicate clearly, execute responsibly, and keep improving until the result feels useful.</div>
+      <div class="proof-list"><span class="proof-pill">Clarity</span><span class="proof-pill">Ownership</span><span class="proof-pill">Delivery</span></div>
+    </div>
+  </div>
+  <div class="wide-note">The direction is not random. Every project, role, and experiment is pushing toward one identity: a person who can understand business needs, think technically, and create working systems that prove capability.</div>
+</section>
+
+<!-- ABOUT -->
 <section id="s-journey">
   <div class="sec-head">
-    <div class="sec-label">// EXPERIENCE</div>
-    <div class="sec-title">WORK & EDUCATION</div>
+    <div class="sec-label">// ABOUT SOURABH</div>
+    <div class="sec-title">BACKGROUND</div>
     <div class="sec-line"></div>
   </div>
   <div class="timeline-wrap">
@@ -286,7 +1014,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="t-meta">MAR 28, 2026 → PRESENT</div>
       <div class="t-title">Software Developer</div>
       <div class="t-company">Brown Anatomy</div>
-      <div class="t-desc">Working as a software developer since March 28, 2026, building practical web, data, and automation-oriented solutions. Focused on implementation quality, clean user-facing tools, and production-minded delivery.</div>
+      <div class="t-desc">Working as a software developer since March 28, 2026, building practical web, data, and automation-oriented solutions. This role strengthens the way I think about real users, clean implementation, useful interfaces, and systems that work outside of theory.</div>
       <div class="t-pills"><span class="t-pill">Software Development</span><span class="t-pill">Web Apps</span><span class="t-pill">Automation</span><span class="t-pill">Delivery</span></div>
     </div>
     <div class="t-item">
@@ -295,7 +1023,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="t-meta">2024 → MAY 2026</div>
       <div class="t-title">Master of Computer Applications (MCA)</div>
       <div class="t-company">Graphic Era University · Dehradun</div>
-      <div class="t-desc">Completed in May 2026 with graduate coursework focused on AI/ML, data systems, software engineering, and data-driven applications. Built portfolio projects around automation, analytics, and practical web tooling.</div>
+      <div class="t-desc">Completed in May 2026 with coursework focused on AI/ML, data systems, software engineering, and data-driven applications. This gave me the academic base to connect technical concepts with practical products, dashboards, reporting, and AI-assisted tools.</div>
       <div class="t-pills"><span class="t-pill">AI/ML</span><span class="t-pill">Data Science</span><span class="t-pill">Systems Design</span><span class="t-pill">Research</span></div>
     </div>
     <div class="t-item">
@@ -304,7 +1032,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="t-meta">JAN 2025 → DEC 2025</div>
       <div class="t-title">Web Developer & SEO Intern</div>
       <div class="t-company">Wevad Media</div>
-      <div class="t-desc">Built and maintained 15+ WordPress and Shopify sites, worked across implementation, SEO improvements, and client-facing delivery. Focused on reliable launches, content structure, performance hygiene, and measurable traffic improvement.</div>
+      <div class="t-desc">Built and maintained 15+ WordPress and Shopify sites, worked across implementation, SEO improvements, and delivery. This period taught me how real websites are structured, optimized, launched, maintained, and judged by measurable results.</div>
       <div class="t-pills"><span class="t-pill">WordPress</span><span class="t-pill">Shopify</span><span class="t-pill">SEO</span><span class="t-pill">UI/UX</span></div>
     </div>
     <div class="t-item">
@@ -312,7 +1040,7 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <span class="t-type work">EXPERIENCE</span>
       <div class="t-title">AI Engineer</div>
       <div class="t-company">Incrementors Web Solution Pvt Ltd</div>
-      <div class="t-desc">Designed AI-assisted automation workflows using n8n and Make, integrating forms, Google Sheets, webhooks, and generated responses. Built responsive client interfaces in HubSpot and Lovable while working inside agile delivery cycles.</div>
+      <div class="t-desc">Designed AI-assisted automation workflows using n8n and Make, integrating forms, Google Sheets, webhooks, and generated responses. Built responsive interfaces in HubSpot and Lovable while learning how fast ideas become useful when execution is disciplined.</div>
       <div class="t-pills"><span class="t-pill">n8n</span><span class="t-pill">Make.com</span><span class="t-pill">Generative AI</span><span class="t-pill">HubSpot</span><span class="t-pill">Agile</span></div>
     </div>
     <div class="t-item">
@@ -327,119 +1055,172 @@ textarea.form-inp{resize:vertical;min-height:90px;}
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- CAPABILITIES -->
 <section id="s-services">
   <div class="sec-head">
-    <div class="sec-label">// CLIENT WORK</div>
-    <div class="sec-title">SERVICES</div>
+    <div class="sec-label">// CAPABILITY MAP</div>
+    <div class="sec-title">WHAT I CAN DO</div>
     <div class="sec-line"></div>
   </div>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-kicker">01</div>
-      <div class="service-title">BUSINESS WEBSITES</div>
-      <div class="service-copy">Clean, responsive websites for local businesses, personal brands, service providers, and product pages with strong structure and conversion-focused sections.</div>
+      <div class="service-title">WEBSITES & DIGITAL PRESENCE</div>
+      <div class="service-copy">I can turn ideas, products, profiles, and businesses into clean responsive websites with structure, clarity, performance awareness, and a polished user experience.</div>
       <div class="service-list"><span class="service-pill">Landing Pages</span><span class="service-pill">Portfolio Sites</span><span class="service-pill">WordPress</span><span class="service-pill">Shopify</span></div>
     </div>
     <div class="service-card">
       <div class="service-kicker">02</div>
-      <div class="service-title">AUTOMATION WORKFLOWS</div>
-      <div class="service-copy">Automations that reduce manual work across forms, Google Sheets, email drafts, webhooks, lead handling, reminders, and internal business operations.</div>
+      <div class="service-title">AUTOMATION THINKING</div>
+      <div class="service-copy">I look for repeated manual steps and convert them into workflows using forms, Google Sheets, webhooks, email logic, AI responses, and practical no-code/low-code tools.</div>
       <div class="service-list"><span class="service-pill">n8n</span><span class="service-pill">Make</span><span class="service-pill">Google Sheets</span><span class="service-pill">Webhooks</span></div>
     </div>
     <div class="service-card">
       <div class="service-kicker">03</div>
-      <div class="service-title">DASHBOARDS & DATA WORK</div>
-      <div class="service-copy">Data cleaning, reporting, dashboards, and business visibility tools for clients who need their numbers organized and easier to understand.</div>
+      <div class="service-title">DATA & DASHBOARDS</div>
+      <div class="service-copy">I can clean, organize, analyze, and present data through dashboards and reports that make numbers easier to understand and act on.</div>
       <div class="service-list"><span class="service-pill">Power BI</span><span class="service-pill">Tableau</span><span class="service-pill">SQL</span><span class="service-pill">Excel</span></div>
     </div>
     <div class="service-card">
       <div class="service-kicker">04</div>
       <div class="service-title">AI TOOLS & PROTOTYPES</div>
-      <div class="service-copy">Small AI-enabled tools and prototypes for content workflows, internal productivity, customer responses, and proof-of-concept business ideas.</div>
+      <div class="service-copy">I explore AI as a building material: assistants, content tools, productivity flows, prototypes, and experiments that show how intelligent systems can support real work.</div>
       <div class="service-list"><span class="service-pill">AI Workflows</span><span class="service-pill">Python</span><span class="service-pill">APIs</span><span class="service-pill">MVPs</span></div>
     </div>
   </div>
-  <div class="client-note">For clients: share the business goal, current process, examples you like, and deadline. I can suggest a practical scope, build the first version, and keep the solution simple enough for you or your team to use after delivery.</div>
+  <div class="client-note">My capability comes from a mix of learning, building, testing, improving, and taking responsibility for outcomes. I do not only collect tools; I use them to create things that are clear, useful, and visible as proof.</div>
 </section>
 
-<!-- SKILLS -->
+<!-- PRODUCTION WORK -->
+<section id="s-production">
+  <div class="sec-head">
+    <div class="sec-label">// 03 - PROOF IN THE REAL WORLD</div>
+    <div class="sec-title">PRODUCTION & PROFESSIONAL WORK</div>
+    <div class="sec-line"></div>
+  </div>
+  <p class="section-intro">Work that exists beyond coursework and experiments: systems, websites, workflows, and responsibilities handled in real operating environments.</p>
+  <div class="work-grid">
+    <div class="work-card featured">
+      <div class="work-meta"><span>CURRENT · 2026 → PRESENT</span><span>PRODUCTION</span></div>
+      <div class="work-title">BROWN ANATOMY</div>
+      <div class="work-subtitle">Software Development & E-commerce Systems</div>
+      <div class="work-copy">Working across production website systems, e-commerce operations, implementation, automation-oriented workflows, analytics, and technical problem solving for an active consumer brand.</div>
+      <div class="work-tags"><span class="work-tag">Software Development</span><span class="work-tag">E-commerce</span><span class="work-tag">Automation</span><span class="work-tag">Operations</span></div>
+    </div>
+    <div class="work-card">
+      <div class="work-meta"><span>PRODUCTION BRAND WORK</span><span>END-TO-END</span></div>
+      <div class="work-title">HOUSE OF SANDHYA</div>
+      <div class="work-subtitle">Website Build, E-commerce & Ongoing Management</div>
+      <div class="work-copy">Worked on website and store implementation, catalogue experience, storefront changes, operational maintenance, and day-to-day improvements as business requirements evolved.</div>
+      <div class="work-tags"><span class="work-tag">Website Build</span><span class="work-tag">Shopify</span><span class="work-tag">Catalogue</span><span class="work-tag">Management</span></div>
+    </div>
+    <div class="work-card">
+      <div class="work-meta"><span>JAN 2025 → DEC 2025</span><span>WEB + SEO</span></div>
+      <div class="work-title">WEVAD MEDIA</div>
+      <div class="work-subtitle">15+ WordPress & Shopify Builds</div>
+      <div class="work-copy">Built and maintained multiple websites, improved SEO hygiene, structured pages, handled content updates, and learned how practical web delivery works under real deadlines.</div>
+      <div class="work-tags"><span class="work-tag">WordPress</span><span class="work-tag">Shopify</span><span class="work-tag">SEO</span><span class="work-tag">UI/UX</span></div>
+    </div>
+    <div class="work-card">
+      <div class="work-meta"><span>AI ENGINEERING</span><span>WORKFLOWS</span></div>
+      <div class="work-title">INCREMENTORS WEB SOLUTION</div>
+      <div class="work-subtitle">AI Automation & Interface Work</div>
+      <div class="work-copy">Designed automation flows using n8n and Make, connected forms, Google Sheets, webhooks, generated responses, and responsive interfaces for practical workflow use cases.</div>
+      <div class="work-tags"><span class="work-tag">n8n</span><span class="work-tag">Make</span><span class="work-tag">Generative AI</span><span class="work-tag">HubSpot</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD RANGE -->
 <section id="s-skills">
   <div class="sec-head">
-    <div class="sec-label">// TECHNICAL TOOLKIT</div>
-    <div class="sec-title">SKILLS</div>
+    <div class="sec-label">// BUILD RANGE</div>
+    <div class="sec-title">WHAT I CAN CREATE</div>
     <div class="sec-line"></div>
   </div>
-  <div class="skills-grid">
-    <div class="sk-panel">
-      <div class="sk-cat">DATA & ANALYTICS</div>
-      <div class="sk-item"><div class="sk-row"><span>Power BI</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-fill" style="--w:90%;--d:0.1s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Tableau</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-fill" style="--w:85%;--d:0.2s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>SQL</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-fill" style="--w:88%;--d:0.3s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>ETL / Data Wrangling</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-fill" style="--w:82%;--d:0.4s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Excel (Advanced)</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-fill" style="--w:92%;--d:0.5s;"></div></div></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-kicker">STARTER</div>
+      <div class="service-title">PROFILE & BRAND WEBSITES</div>
+      <div class="service-copy">Personal profiles, portfolio pages, business websites, creator pages, product pages, and multi-section sites that explain something clearly.</div>
+      <div class="service-list"><span class="service-pill">Landing page</span><span class="service-pill">Multi-section site</span><span class="service-pill">Mobile responsive</span><span class="service-pill">Contact CTA</span></div>
     </div>
-    <div class="sk-panel">
-      <div class="sk-cat">AI & MACHINE LEARNING</div>
-      <div class="sk-item"><div class="sk-row"><span>Python</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-fill" style="--w:92%;--d:0.1s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Scikit-learn</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-fill" style="--w:85%;--d:0.2s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Generative AI</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-fill" style="--w:80%;--d:0.3s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>n8n / Make.com</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-fill" style="--w:88%;--d:0.4s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Statistics & R</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-fill" style="--w:78%;--d:0.5s;"></div></div></div>
+    <div class="service-card">
+      <div class="service-kicker">SPRINT</div>
+      <div class="service-title">WORKFLOW AUTOMATIONS</div>
+      <div class="service-copy">Systems that reduce repeated work: form handling, sheet updates, email drafts, lead routing, reminders, webhooks, and AI-assisted responses.</div>
+      <div class="service-list"><span class="service-pill">Workflow map</span><span class="service-pill">n8n / Make</span><span class="service-pill">Sheets</span><span class="service-pill">Webhooks</span></div>
     </div>
-    <div class="sk-panel">
-      <div class="sk-cat">WEB DEVELOPMENT</div>
-      <div class="sk-item"><div class="sk-row"><span>WordPress / Shopify</span><span class="sk-pct">93%</span></div><div class="sk-track"><div class="sk-fill" style="--w:93%;--d:0.1s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>HubSpot / Lovable</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-fill" style="--w:82%;--d:0.2s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>SEO Strategy</span><span class="sk-pct">87%</span></div><div class="sk-track"><div class="sk-fill" style="--w:87%;--d:0.3s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>UI/UX Design</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-fill" style="--w:80%;--d:0.4s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>CI/CD / Agile</span><span class="sk-pct">76%</span></div><div class="sk-track"><div class="sk-fill" style="--w:76%;--d:0.5s;"></div></div></div>
+    <div class="service-card">
+      <div class="service-kicker">INSIGHT</div>
+      <div class="service-title">DASHBOARDS & REPORTS</div>
+      <div class="service-copy">Clear dashboards and reports for sales, leads, operations, inventory, performance, learning progress, or any area where raw data needs meaning.</div>
+      <div class="service-list"><span class="service-pill">Data cleanup</span><span class="service-pill">KPIs</span><span class="service-pill">Power BI</span><span class="service-pill">Excel / SQL</span></div>
     </div>
-    <div class="sk-panel">
-      <div class="sk-cat">LANGUAGES & TOOLS</div>
-      <div class="sk-item"><div class="sk-row"><span>Pandas / NumPy</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-fill" style="--w:90%;--d:0.1s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Java</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-fill" style="--w:75%;--d:0.2s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>C</span><span class="sk-pct">70%</span></div><div class="sk-track"><div class="sk-fill" style="--w:70%;--d:0.3s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Google Sheets & APIs</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-fill" style="--w:85%;--d:0.4s;"></div></div></div>
-      <div class="sk-item"><div class="sk-row"><span>Webhooks / Automation</span><span class="sk-pct">87%</span></div><div class="sk-track"><div class="sk-fill" style="--w:87%;--d:0.5s;"></div></div></div>
+    <div class="service-card">
+      <div class="service-kicker">MVP</div>
+      <div class="service-title">CUSTOM TOOL PROTOTYPES</div>
+      <div class="service-copy">First usable versions of ideas: catalogue tools, task managers, AI utilities, internal admin tools, dashboards, and proof-of-concept apps.</div>
+      <div class="service-list"><span class="service-pill">Prototype</span><span class="service-pill">Admin flow</span><span class="service-pill">AI assist</span><span class="service-pill">Handoff notes</span></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- WORK -->
 <section id="s-projects">
   <div class="sec-head">
-    <div class="sec-label">// VERIFIED WORK</div>
-    <div class="sec-title">FEATURED PROJECTS</div>
+    <div class="sec-label">// 04 - BUILD LAB</div>
+    <div class="sec-title">PROJECTS & EXPERIMENTS</div>
     <div class="sec-line"></div>
   </div>
-  <p class="proj-note">Best projects are shown first with source links and live demos where GitHub Pages is enabled. Recruiters can inspect the code, open the deployed build, and verify recent activity directly from GitHub.</p>
+  <p class="proj-note">These projects show the work behind my words: live tools, product catalogues, workflow prototypes, AI utilities, dashboards, data notebooks, and source-backed builds. They help people understand my range, execution style, and ability to turn ideas into working output.</p>
   <div class="proj-grid">
     <div class="proj-loading" id="projectsLoading">SYNCING GITHUB PROJECTS...</div>
   </div>
 </section>
 
-<!-- AWARDS -->
+<!-- MINDSET -->
 <section id="s-awards">
   <div class="sec-head">
-    <div class="sec-label">// CREDENTIALS</div>
-    <div class="sec-title">CERTIFICATIONS & ACHIEVEMENTS</div>
+    <div class="sec-label">// HOW I THINK</div>
+    <div class="sec-title">MY WORKING MINDSET</div>
     <div class="sec-line"></div>
   </div>
-  <div class="awards-grid">
-    <div class="aw-card"><div class="aw-icon"><span>★</span></div><div><div class="aw-title">Intro to Generative AI — Art of the Possible</div><div class="aw-src">AWS TRAINING & CERTIFICATION</div><div class="aw-date">NOV 2025</div></div></div>
-    <div class="aw-card"><div class="aw-icon"><span>★</span></div><div><div class="aw-title">Customer Relationship Management</div><div class="aw-src">HP LIFE · HP FOUNDATION</div><div class="aw-date">NOV 2025</div></div></div>
-    <div class="aw-card"><div class="aw-icon"><span>★</span></div><div><div class="aw-title">Data Science & ML Internship</div><div class="aw-src">YBI FOUNDATION</div><div class="aw-date">APR 2024</div></div></div>
-    <div class="aw-card"><div class="aw-icon"><span>★</span></div><div><div class="aw-title">Introduction to Data Analytics</div><div class="aw-src">SIMPLILEARN</div><div class="aw-date">NOV 2023</div></div></div>
-    <div class="aw-card chess-card"><div class="aw-icon"><span>♛</span></div><div><div class="aw-title">National School Chess Championship — DNH Representative</div><div class="aw-src">65TH NATIONAL CHAMPIONSHIP</div><div class="aw-date">2019 — 2020</div></div></div>
+  <div class="section-lead">
+    <p class="section-intro">This is how I approach work when I want people to believe in me: understand clearly, build visibly, take responsibility, and improve through proof.</p>
+    <div class="section-aside">Capability is not only talent. It is how consistently a person can learn, execute, adapt, and make something better than it was before.</div>
+  </div>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-step">01</div><div class="process-title">Understand deeply</div><div class="process-copy">Before building, I try to understand the real problem, the user, the context, and what success should actually look like.</div></div>
+    <div class="process-card"><div class="process-step">02</div><div class="process-title">Break complexity down</div><div class="process-copy">I convert big ideas into pages, flows, features, data fields, integrations, and clear next actions that can actually be built.</div></div>
+    <div class="process-card"><div class="process-step">03</div><div class="process-title">Build visible proof</div><div class="process-copy">I believe people trust capability when they can see real demos, repositories, dashboards, automations, and usable work.</div></div>
+    <div class="process-card"><div class="process-step">04</div><div class="process-title">Keep improving</div><div class="process-copy">I learn by shipping, testing, observing gaps, and making the next version sharper than the last one.</div></div>
+  </div>
+  <div class="mindset-panel">
+    <div class="mindset-box">
+      <div class="mindset-title">HOW I BUILD TRUST</div>
+      <div class="mindset-list">
+        <span>I show real work instead of only making claims.</span>
+        <span>I explain the problem, the process, and the output clearly.</span>
+        <span>I keep learning new tools but connect them to practical outcomes.</span>
+      </div>
+    </div>
+    <div class="mindset-box">
+      <div class="mindset-title">WHAT I AM IMPROVING NEXT</div>
+      <div class="mindset-list">
+        <span>Stronger production architecture and scalable app structure.</span>
+        <span>Cleaner dashboards, better analytics, and deeper data storytelling.</span>
+        <span>More AI-assisted workflows that save time and create measurable value.</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="s-contact">
   <div class="sec-head">
-    <div class="sec-label">// CONTACT</div>
-    <div class="sec-title">GET IN TOUCH</div>
+    <div class="sec-label">// CONNECT</div>
+    <div class="sec-title">CONTACT</div>
     <div class="sec-line"></div>
   </div>
   <div class="contact-grid">
@@ -451,10 +1232,10 @@ textarea.form-inp{resize:vertical;min-height:90px;}
       <div class="c-row"><div class="c-ico">⌖</div><div><div class="c-lbl">LOCATION</div><div class="c-val">Dehradun, Uttarakhand, India</div></div></div>
     </div>
     <div class="contact-form-wrap">
-      <div class="contact-card-title">RECRUITER SNAPSHOT</div>
-      <p class="contact-card-copy">Currently working as a Software Developer at Brown Anatomy since March 28, 2026, with MCA completed in May 2026. Available for selected freelance/client work including websites, automation workflows, dashboards, AI tools, and full-stack prototypes.</p>
+      <div class="contact-card-title">PERSONAL SNAPSHOT</div>
+      <p class="contact-card-copy">If you want to know Sourabh Singh, start here: my journey, my skills, my proof of work, and the direction I am building toward. For technology, ideas, opportunities, collaborations, or meaningful conversations, reach out.</p>
       <div class="contact-actions">
-        <a class="contact-action primary" href="mailto:sourabhsingh0142003@gmail.com">EMAIL ME</a>
+        <a class="contact-action primary" href="mailto:sourabhsingh0142003@gmail.com">CONTACT ME</a>
         <a class="contact-action" href="https://github.com/Sourabh1975" target="_blank" rel="noopener">GITHUB</a>
         <a class="contact-action" href="https://www.linkedin.com/in/sourabh-singh-95145221b" target="_blank" rel="noopener">LINKEDIN</a>
       </div>
@@ -463,8 +1244,8 @@ textarea.form-inp{resize:vertical;min-height:90px;}
 </section>
 
 <div class="footer-bar">
-  <div class="f-left">SOURABH.SINGH — MCA 2026 · DEHRADUN</div>
-  <div class="f-right">AI AUTOMATION · DATA · FULL-STACK</div>
+  <div class="f-left">SOURABH.SINGH — PERSONAL CAPABILITY PORTFOLIO</div>
+  <div class="f-right">SOFTWARE · AUTOMATION · DATA · AI · EXECUTION</div>
 </div>
 
 <script>
@@ -519,20 +1300,91 @@ window.toggleMenu=function(){
   nav.classList.toggle('open');
   ham.classList.toggle('open');
 }
-window.go=function(id){
-  document.querySelectorAll('section').forEach(s=>s.style.display='none');
-  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
-  const sec=document.getElementById('s-'+id);
-  if(sec){sec.style.display='block';}
-  const map={home:0,journey:1,services:2,skills:3,projects:4,awards:5,contact:6};
+
+const SECTION_ORDER=['home','building','services','skills','production','projects','awards','journey','contact'];
+const NAV_MAP={home:0,building:1,services:2,production:3,projects:4,awards:5,journey:6,contact:7};
+const themeToggle=document.getElementById('themeToggle');
+function applyTheme(theme){
+  document.body.dataset.theme=theme;
+  if(themeToggle){
+    themeToggle.textContent=theme==='dark'?'LIGHT':'DARK';
+    themeToggle.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');
+  }
+}
+applyTheme(localStorage.getItem('portfolio-theme')||'light');
+if(themeToggle){
+  themeToggle.addEventListener('click',()=>{
+    const next=document.body.dataset.theme==='dark'?'light':'dark';
+    localStorage.setItem('portfolio-theme',next);
+    applyTheme(next);
+  });
+}
+// Paste your public profile image URL here when ready.
+const PROFILE_IMAGE_URL='assets/profile-photo.png';
+const profilePhoto=document.getElementById('profilePhoto');
+const profilePhotoWrap=document.getElementById('profilePhotoWrap');
+function setProfilePhoto(src){
+  if(!profilePhoto || !profilePhotoWrap) return;
+  if(src){
+    profilePhoto.src=src;
+    profilePhotoWrap.classList.add('has-photo');
+  }else{
+    profilePhoto.removeAttribute('src');
+    profilePhotoWrap.classList.remove('has-photo');
+  }
+}
+setProfilePhoto(PROFILE_IMAGE_URL);
+const footerBar=document.querySelector('.footer-bar');
+SECTION_ORDER.forEach(id=>{
+  const section=document.getElementById('s-'+id);
+  if(section && footerBar) document.body.insertBefore(section,footerBar);
+});
+
+let activeSectionId='';
+let ticking=false;
+function setActiveNav(id,updateHash=false){
   const links=document.querySelectorAll('.nav-link');
-  if(map[id]!==undefined&&links[map[id]])links[map[id]].classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  if(NAV_MAP[id]!==undefined&&links[NAV_MAP[id]]) links[NAV_MAP[id]].classList.add('active');
+  if(updateHash && window.location.hash!==`#${id}`) history.replaceState(null,'',`#${id}`);
+}
+
+window.go=function(id,syncHash=true){
+  const sec=document.getElementById('s-'+id);
+  activeSectionId=id;
+  setActiveNav(id,syncHash);
   document.getElementById('navLinks').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
-  window.scrollTo({top:0,behavior:'smooth'});
+  if(sec) sec.scrollIntoView({behavior:'smooth',block:'start'});
 }
 const initialSection=(window.location.hash||'#home').replace('#','');
-go(['home','journey','services','skills','projects','awards','contact'].includes(initialSection)?initialSection:'home');
+go(SECTION_ORDER.includes(initialSection)?initialSection:'home',false);
+window.addEventListener('hashchange',()=>{
+  const id=(window.location.hash||'#home').replace('#','');
+  if(SECTION_ORDER.includes(id)) go(id,false);
+});
+
+function updateActiveSection(){
+  const probeY=window.scrollY+Math.min(window.innerHeight*0.38,260);
+  let current=SECTION_ORDER[0];
+  SECTION_ORDER.forEach(id=>{
+    const section=document.getElementById('s-'+id);
+    if(section && section.offsetTop<=probeY) current=id;
+  });
+  if(current!==activeSectionId){
+    activeSectionId=current;
+    setActiveNav(current,true);
+  }
+  ticking=false;
+}
+window.addEventListener('scroll',()=>{
+  if(!ticking){
+    requestAnimationFrame(updateActiveSection);
+    ticking=true;
+  }
+},{passive:true});
+window.addEventListener('resize',updateActiveSection);
+updateActiveSection();
 
 const GITHUB_USER='Sourabh1975';
 const PROJECT_GRID=document.querySelector('#s-projects .proj-grid');
@@ -547,33 +1399,33 @@ const FEATURED_PROJECTS=[
 const PROJECT_COPY={
   'catalogue-creator':{
     title:'Product Catalogue Creator',
-    summary:'A JavaScript product-catalogue tool focused on turning product inputs into structured, presentable catalogue output for business workflows.',
-    impact:['Client-style tool','Live GitHub Pages build','JavaScript UI']
+    summary:'A JavaScript product-catalogue tool that shows my ability to turn messy product information into structured, presentable, usable output.',
+    impact:['Business catalogue','Live demo','JavaScript UI']
   },
   'hos-work-management':{
     title:'HOS Work Management Prototype',
-    summary:'A functional admin and employee workflow prototype for work assignment, status visibility, and operational tracking.',
-    impact:['Role-based workflow','Admin/employee flow','Live prototype']
+    summary:'A workflow prototype for admin and employee operations, showing how I think about task assignment, visibility, accountability, and status tracking.',
+    impact:['Operations workflow','Admin flow','Live prototype']
   },
   'task-manager':{
     title:'Mini Full-Stack Task Manager',
-    summary:'Assignment-style task manager demonstrating CRUD thinking, app structure, and practical JavaScript implementation for everyday workflow management.',
-    impact:['CRUD workflow','Full-stack practice','JavaScript']
+    summary:'A compact task-management app showing how everyday workflows can be organized into simple create, update, and tracking actions.',
+    impact:['Task workflow','App structure','JavaScript']
   },
   'AI-Article-Generator':{
     title:'AI Article Generator',
-    summary:'A web interface for AI-assisted article generation, built as a practical content automation experiment with a deployed front-end.',
-    impact:['AI content workflow','Live demo','HTML UI']
+    summary:'A web interface for AI-assisted article generation, showing my interest in combining content workflows with intelligent generation tools.',
+    impact:['Content automation','Live demo','HTML UI']
   },
   'Jarvis-AI-App':{
     title:'Jarvis AI App',
-    summary:'Python-based assistant project exploring automation-style interactions and AI utility patterns through a local application structure.',
-    impact:['Python automation','AI assistant concept','Source available']
+    summary:'A Python assistant concept exploring automation-style interactions, productivity patterns, and AI utility thinking.',
+    impact:['Python automation','Assistant concept','Source available']
   },
   'Projects':{
     title:'Data Science Notebook Projects',
-    summary:'Jupyter Notebook work covering data exploration and ML practice, useful for reviewing Python, analysis, and modelling fundamentals.',
-    impact:['Jupyter notebooks','Data analysis','ML practice']
+    summary:'Notebook-based data exploration and ML practice showing analysis, modelling, Python fundamentals, and curiosity for data-driven problem solving.',
+    impact:['Data analysis','ML practice','Python notebooks']
   }
 };
 
@@ -604,7 +1456,7 @@ function renderProjectCard(repo,index){
   const updated=new Date(repo.updated_at).toLocaleDateString('en-IN',{month:'short',year:'numeric'});
   const badge=liveUrl?'LIVE DEMO':'SOURCE REPO';
   const badgeClass=liveUrl?'legend':'epic';
-  const desc=copy.summary||repo.description||'GitHub project by Sourabh Singh. Open the repository to explore the complete source code, setup details, and latest updates.';
+  const desc=copy.summary||repo.description||'GitHub project by Sourabh Singh. Open the repository to explore the source code, setup details, and proof behind the build.';
   const safeName=escapeHtml(copy.title||cleanProjectName(repo.name));
   const safeDesc=escapeHtml(desc);
   const impact=copy.impact||[`Updated ${updated}`,repo.language||'Source available'];
