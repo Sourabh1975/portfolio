@@ -137,6 +137,10 @@ section.active{display:block;}
 .work-copy{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:16px;}
 .work-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .work-tag{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 9px;border:1px solid var(--border2);color:rgba(232,244,255,.56);letter-spacing:1px;}
+.work-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.work-link{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;text-decoration:none;padding:10px 14px;border:1px solid var(--border2);color:var(--muted);transition:all .25s;}
+.work-link.live{border-color:rgba(0,229,255,.45);color:var(--neon);background:rgba(0,229,255,.07);}
+.work-link:hover{border-color:var(--border);color:var(--text);}
 @media(max-width:800px){.section-lead,.proof-grid,.work-grid,.mindset-panel{grid-template-columns:1fr;}.mini-metrics{grid-template-columns:1fr;}}
 .sk-panel{padding:24px;border:1px solid var(--border2);background:var(--glass);position:relative;overflow:hidden;}
 .sk-panel::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;}
@@ -652,6 +656,24 @@ section{
   color:#243248;
   background:#f8fbff;
 }
+.work-link{
+  font-family:'Manrope','Inter',sans-serif;
+  letter-spacing:0;
+  font-weight:800;
+  border-radius:8px;
+  color:#243248;
+  background:#f8fbff;
+}
+.work-link.live{
+  border-color:#1457e6;
+  color:#fff;
+  background:#1457e6;
+}
+.work-link:hover{
+  border-color:#1457e6;
+  color:#0f49c9;
+  background:#eaf2ff;
+}
 .proj-link.live,.contact-action.primary{
   border-color:#1457e6;
   color:#fff;
@@ -740,6 +762,7 @@ body[data-theme="dark"] .service-pill,
 body[data-theme="dark"] .proof-pill,
 body[data-theme="dark"] .work-tag,
 body[data-theme="dark"] .ptool,
+body[data-theme="dark"] .work-link,
 body[data-theme="dark"] .proj-link,
 body[data-theme="dark"] .contact-action{
   background:rgba(8,17,31,.78);
@@ -792,6 +815,7 @@ body[data-theme="dark"] .proj-note{
   border-left-color:var(--neon);
 }
 body[data-theme="dark"] .btn-glow,
+body[data-theme="dark"] .work-link.live,
 body[data-theme="dark"] .proj-link.live,
 body[data-theme="dark"] .contact-action.primary{
   background:rgba(33,216,255,.12);
@@ -799,6 +823,7 @@ body[data-theme="dark"] .contact-action.primary{
   border-color:rgba(33,216,255,.55);
 }
 body[data-theme="dark"] .btn-glow:hover,
+body[data-theme="dark"] .work-link.live:hover,
 body[data-theme="dark"] .proj-link.live:hover,
 body[data-theme="dark"] .contact-action.primary:hover{
   background:rgba(33,216,255,.2);
@@ -806,6 +831,7 @@ body[data-theme="dark"] .contact-action.primary:hover{
 }
 body[data-theme="dark"] .theme-toggle:hover,
 body[data-theme="dark"] .btn-outline:hover,
+body[data-theme="dark"] .work-link:hover,
 body[data-theme="dark"] .proj-link:hover,
 body[data-theme="dark"] .contact-action:hover{
   color:#dff9ff;
@@ -1223,6 +1249,7 @@ body[data-theme="dark"] .profile-signature span{color:#9fb0c6;}
       <div class="work-subtitle">Software Development & E-commerce Systems</div>
       <div class="work-copy">Working across production website systems, e-commerce operations, implementation, automation-oriented workflows, analytics, and technical problem solving for an active consumer brand.</div>
       <div class="work-tags"><span class="work-tag">Software Development</span><span class="work-tag">E-commerce</span><span class="work-tag">Automation</span><span class="work-tag">Operations</span></div>
+      <div class="work-actions"><a class="work-link live" href="https://brownanatomy.com" target="_blank" rel="noopener">LIVE WEBSITE</a></div>
     </div>
     <div class="work-card">
       <div class="work-meta"><span>PRODUCTION BRAND WORK</span><span>END-TO-END</span></div>
@@ -1230,6 +1257,7 @@ body[data-theme="dark"] .profile-signature span{color:#9fb0c6;}
       <div class="work-subtitle">Website Build, E-commerce & Ongoing Management</div>
       <div class="work-copy">Worked on website and store implementation, catalogue experience, storefront changes, operational maintenance, and day-to-day improvements as business requirements evolved.</div>
       <div class="work-tags"><span class="work-tag">Website Build</span><span class="work-tag">Shopify</span><span class="work-tag">Catalogue</span><span class="work-tag">Management</span></div>
+      <div class="work-actions"><a class="work-link live" href="https://houseofsandhaya.com" target="_blank" rel="noopener">LIVE WEBSITE</a></div>
     </div>
     <div class="work-card">
       <div class="work-meta"><span>JAN 2025 → DEC 2025</span><span>WEB + SEO</span></div>
