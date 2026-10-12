@@ -1290,7 +1290,7 @@ body[data-theme="dark"] .profile-signature span{color:#9fb0c6;}
     <div class="sec-title">PROJECTS & EXPERIMENTS</div>
     <div class="sec-line"></div>
   </div>
-  <p class="proj-note">These projects show the work behind my words: live tools, product catalogues, workflow prototypes, AI utilities, dashboards, data notebooks, and source-backed builds. They help people understand my range, execution style, and ability to turn ideas into working output.</p>
+  <p class="proj-note">These projects show the work behind my words: live tools, product catalogues, workflow prototypes, dashboards, and source-backed builds. They help people understand my range, execution style, and ability to turn ideas into working output.</p>
   <div class="proj-grid">
     <div class="proj-loading" id="projectsLoading">SYNCING GITHUB PROJECTS...</div>
   </div>
@@ -1502,12 +1502,18 @@ const GITHUB_USER='Sourabh1975';
 const PROJECT_GRID=document.querySelector('#s-projects .proj-grid');
 const FEATURED_PROJECTS=[
   'catalogue-creator',
-  'hos-work-management',
+  'hos-work-management'
+];
+const EXCLUDED_PROJECTS=new Set([
+  'React',
+  'MY Project',
   'task-manager',
   'AI-Article-Generator',
   'Jarvis-AI-App',
-  'Projects'
-];
+  'Projects',
+  'Resume1',
+  'AI'
+].map(name=>name.toLowerCase()));
 const PROJECT_COPY={
   'catalogue-creator':{
     title:'Product Catalogue Creator',
@@ -1518,26 +1524,6 @@ const PROJECT_COPY={
     title:'HOS Work Management Prototype',
     summary:'A workflow prototype for admin and employee operations, showing how I think about task assignment, visibility, accountability, and status tracking.',
     impact:['Operations workflow','Admin flow','Live prototype']
-  },
-  'task-manager':{
-    title:'Mini Full-Stack Task Manager',
-    summary:'A compact task-management app showing how everyday workflows can be organized into simple create, update, and tracking actions.',
-    impact:['Task workflow','App structure','JavaScript']
-  },
-  'AI-Article-Generator':{
-    title:'AI Article Generator',
-    summary:'A web interface for AI-assisted article generation, showing my interest in combining content workflows with intelligent generation tools.',
-    impact:['Content automation','Live demo','HTML UI']
-  },
-  'Jarvis-AI-App':{
-    title:'Jarvis AI App',
-    summary:'A Python assistant concept exploring automation-style interactions, productivity patterns, and AI utility thinking.',
-    impact:['Python automation','Assistant concept','Source available']
-  },
-  'Projects':{
-    title:'Data Science Notebook Projects',
-    summary:'Notebook-based data exploration and ML practice showing analysis, modelling, Python fundamentals, and curiosity for data-driven problem solving.',
-    impact:['Data analysis','ML practice','Python notebooks']
   }
 };
 
@@ -1596,7 +1582,8 @@ async function loadGitHubProjects(){
     const res=await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`);
     if(!res.ok) throw new Error('GitHub API unavailable');
     const publicRepos=(await res.json())
-      .filter(repo=>!repo.fork&&!repo.archived&&repo.name.toLowerCase()!=='portfolio');
+      .filter(repo=>!repo.fork&&!repo.archived&&repo.name.toLowerCase()!=='portfolio')
+      .filter(repo=>!EXCLUDED_PROJECTS.has(repo.name.toLowerCase()));
     const featured=FEATURED_PROJECTS
       .map(name=>publicRepos.find(repo=>repo.name===name))
       .filter(Boolean);
